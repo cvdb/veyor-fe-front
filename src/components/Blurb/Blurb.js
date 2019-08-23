@@ -1,12 +1,14 @@
 import React from 'react';
+import './Blurb.css';
+
 
 function Blurb() {
   return (
     <React.Fragment>
     <h1>Veyor</h1>
-    <h2>Front End Coding Challenge</h2>
-    <h2>Scroll the images fetched from flickr</h2>
-    <p>in the phone like thing on the right....</p>
+    <h3>Front End</h3>
+    <h3>Coding Challenge</h3>
+    <p>Scroll the images fetched from flickr in the phone like thing on the right....</p>
     </React.Fragment>
   );
 }

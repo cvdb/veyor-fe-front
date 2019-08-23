@@ -1,0 +1,22 @@
+
+.image.phone {
+  width: 350px;
+}
+
+.image.phone .inner {
+  height: 400px;
+}
+
+.image.phone .inner div {
+  padding: 10px;
+}
+
+.image.phone .inner div div div {
+  padding: 10px;
+}
+
+.image.phone .inner div div div img {
+  width: 300px;
+  height: 260px;
+}
+

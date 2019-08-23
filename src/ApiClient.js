@@ -4,12 +4,31 @@ function search(tags, page, cb) {
   // lets always send it here anyway
   page = page || 1;
 
-  return fetch(`api/food?q=${query}`, {
+  return fetch(`feed/${tags}/${page}`, {
     accept: "application/json"
   })
     .then(checkStatus)
     .then(parseJSON)
     .then(cb);
+
+  // return Promise.resolve(
+  //   {
+  //     photos: {
+  //       page: 1,
+  //       pages: 20,
+  //       perpage: 5,
+  //       total: '202704',
+  //       photo: [
+  //         'https://farm66.staticflickr.com/65535/48592965357_22ab22e082_m.jpg',
+  //         'https://farm66.staticflickr.com/65535/48592821811_0e80dde859_m.jpg',
+  //         'https://farm66.staticflickr.com/65535/48592963737_b0ee686e52_m.jpg',
+  //         'https://farm66.staticflickr.com/65535/48592962677_b45c2d2cb0_m.jpg',
+  //         'https://farm66.staticflickr.com/65535/48592818661_9cf2087e67_m.jpg',
+  //       ]
+  //     },
+  //     stat: 'ok'
+  //   }
+  // );
 }
 
 function checkStatus(response) {
