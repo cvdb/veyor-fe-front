@@ -1,10 +1,16 @@
 /* eslint-disable no-undef */
 function search(tags, page, cb) {
-  // NOTE: the API does treat page number as optional but
-  // lets always send it here anyway
   page = page || 1;
+  let url; 
 
-  return fetch(`feed/${tags}/${page}`, {
+  // if there are no tags then we can leave
+  if (tags) {
+    url = `feed/${page}/${tags}`;
+  } else {
+    url = `feed/${page}`;
+  }
+
+  return fetch(url, {
     accept: "application/json"
   })
     .then(checkStatus)
