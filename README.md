@@ -21,3 +21,11 @@ https://medium.com/@ktruong008/absolute-imports-with-create-react-app-4338fbca7e
 ## Storybook
 Its great when developing larger projects but for this simple app its an overkill
 
+## Would have added....
+unfortunately I did not have that much free time......I would like to have added 2 more features:
+
+* scrolling of the images without the use of the scroll bar....to act more like a mobile phone.
+* on clicking an image display a bootstrap modal with a larger version of the image.
+
+The url format of the images is `https://farm66.staticflickr.com/65535/48592965357_22ab22e082_z.jpg`
+so simply changing the `_z.jpg` to `_m.jpg` would return a larger copy of the image.
